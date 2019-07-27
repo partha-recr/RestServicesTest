@@ -23,7 +23,7 @@ public class ChatController {
     @SendTo("/topic/public")
     public ChatMessage addUser(@Payload ChatMessage chatMessage,
                                SimpMessageHeaderAccessor headerAccessor) {
-        // Add username in web socket session
+        // Add username in web socket session ---hello
         headerAccessor.getSessionAttributes().put("username", chatMessage.getSender());
         return chatMessage;
     }
